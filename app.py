@@ -1,6 +1,6 @@
 """
 Pro VPS Panel - Railway deployable
-Owner: agajayofficialbro / agajayofficialbro
+Owner: MR SHUVO
 """
 import os, json, time, uuid, shutil, subprocess, threading, signal, secrets
 from collections import deque
@@ -20,12 +20,12 @@ FILES_ROOT = APP_DIR / "user_files"
 DATA_DIR.mkdir(exist_ok=True)
 FILES_ROOT.mkdir(exist_ok=True)
 
-OWNER_USER = "SHUVO"
-OWNER_PASS = "123"
+OWNER_USER = "MR SHUVO"
+OWNER_PASS = "admin123"
 
 DEFAULT_PRICING = {
     "currency": "₹",
-    "contact": "Telegram: @agajayofficial",
+    "contact": "Telegram: @mrshuvo",
     "plans": [
         {"name": "Starter", "duration": "24 Hours",  "price": "49",  "features": "1 file run, 512MB RAM, Real-time logs"},
         {"name": "Basic",   "duration": "7 Days",    "price": "199", "features": "Multi-file upload, pip/npm install, 24/7 uptime"},
