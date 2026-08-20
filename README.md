@@ -1,45 +1,49 @@
-# Mini VPS Panel (Railway)
+# 🚀 Mini VPS Panel
 
-Ek chhota web-based VPS jaisa panel — Railway pe deploy hota hai. Owner users banata hai, har user apni Python / Node / Shell files upload, run, restart, stop kar sakta hai, modules install kar sakta hai, aur real-time logs dekh sakta hai.
+A lightweight web-based VPS-like panel for managing Python, Node.js, and Shell scripts with user isolation and real-time monitoring.
 
-## Owner credentials
-- Username: `agajayofficialbro`
-- Password: `agajayofficialbro`
+## 📋 Table of Contents
+- [Features](#-features)
+- [Demo Credentials](#-demo-credentials)
+- [Deployment](#-deployment)
+- [Local Development](#-local-development)
+- [Project Structure](#-project-structure)
+- [Security Notes](#-security-notes)
+- [Tech Stack](#-tech-stack)
+- [Screenshots](#-screenshots)
 
-## Deploy on Railway
+## ✨ Features
 
-1. Is `vps-panel/` folder ko ek naye GitHub repo ki **root** me push karo.
-2. Railway → New Project → Deploy from GitHub repo → repo select karo.
-3. Railway automatically `nixpacks.toml` se Python 3.11 + Node 20 install karega aur `Procfile` se gunicorn start karega.
-4. Settings → Networking → **Generate Domain**.
-5. Domain pe jao, `agajayofficialbro / agajayofficialbro` se login karo.
+### 🔐 Owner Dashboard
+- Create/delete users with custom expiry times
+- Generate shareable auto-login links
+- Monitor all active user sessions
+- Extend user expiry periods
+- Auto-cleanup of expired users and their processes
 
-## Features
+### 👤 User Dashboard
+- **File Management**: Upload multiple files (up to 200MB total)
+- **Process Control**: Start/Stop/Restart `.py`, `.js`, `.sh` scripts
+- **Package Management**: Install Python packages (`pip install`) or Node modules (`npm install`)
+- **Real-time Logs**: Live log streaming with auto-refresh
+- **File Operations**: View and delete uploaded files
 
-**Owner:**
-- Naye users banao (username, password, expiry hours)
-- Har user ka **auto-login link** milta hai (share karne ke liye)
-- Users ko extend / delete karo
-- Expiry hone par user auto-delete + uska process auto-stop
+## 🔑 Demo Credentials
 
-**User:**
-- Multiple files ek saath upload (200MB tak)
-- `.py` / `.js` / `.sh` files ko Start / Stop / Restart
-- Real-time logs (auto-refresh)
-- Modules install: `pip install <module>` ya `npm install <module>`
-- File view aur delete
+| Role | Username | Password |
+|------|----------|----------|
+| Owner | `mrshuvo` | `mrshuvo` |
 
-## Notes
+> ⚠️ **Important**: Change these credentials immediately after first login!
 
-- Railway ke ephemeral filesystem ki wajah se redeploy hone par uploaded files / users.json reset ho sakte hain. Persist karne ke liye Railway Volume mount karo `/app/vps-panel/data` aur `/app/vps-panel/user_files` pe.
-- `SECRET_KEY` env var set karo production me (warna har restart pe sessions reset ho jate hain).
-- Sirf `pip install` / `npm install` commands allowed hain (security).
+## 🚀 Deployment
 
-## Local run
+### Deploy on Railway (Recommended)
 
-```bash
-cd vps-panel
-pip install -r requirements.txt
-python app.py
-# open http://localhost:5000
-```
+1. **Push to GitHub**
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git remote add origin https://github.com/yourusername/vps-panel.git
+   git push -u origin main
