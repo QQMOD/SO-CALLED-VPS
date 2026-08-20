@@ -1,49 +1,42 @@
-# 🚀 Mini VPS Panel
+# Pro VPS Panel (Railway Deployable)
 
-A lightweight web-based VPS-like panel for managing Python, Node.js, and Shell scripts with user isolation and real-time monitoring.
+A lightweight web-based VPS panel that runs on Railway. Each user can upload, run, and manage Python/Node/Shell files with real-time logs.
 
-## 📋 Table of Contents
-- [Features](#-features)
-- [Demo Credentials](#-demo-credentials)
-- [Deployment](#-deployment)
-- [Local Development](#-local-development)
-- [Project Structure](#-project-structure)
-- [Security Notes](#-security-notes)
-- [Tech Stack](#-tech-stack)
-- [Screenshots](#-screenshots)
+## Owner Credentials
+- Username: `MR SHUVO`
+- Password: `admin123`
 
-## ✨ Features
+## Deploy on Railway
 
-### 🔐 Owner Dashboard
-- Create/delete users with custom expiry times
-- Generate shareable auto-login links
-- Monitor all active user sessions
-- Extend user expiry periods
-- Auto-cleanup of expired users and their processes
+1. Push this project to a GitHub repository
+2. Go to Railway → New Project → Deploy from GitHub
+3. Railway automatically detects `nixpacks.toml` and deploys
+4. Generate a domain in Railway settings
+5. Login with owner credentials
 
-### 👤 User Dashboard
-- **File Management**: Upload multiple files (up to 200MB total)
-- **Process Control**: Start/Stop/Restart `.py`, `.js`, `.sh` scripts
-- **Package Management**: Install Python packages (`pip install`) or Node modules (`npm install`)
-- **Real-time Logs**: Live log streaming with auto-refresh
-- **File Operations**: View and delete uploaded files
+## Features
 
-## 🔑 Demo Credentials
+**Owner (MR SHUVO):**
+- Create user accounts (username, password, expiry hours)
+- Auto-login links for each user
+- Extend or delete user accounts
+- Automatic account expiry with process cleanup
 
-| Role | Username | Password |
-|------|----------|----------|
-| Owner | `mrshuvo` | `mrshuvo` |
+**Users:**
+- Upload multiple files (up to 200MB)
+- Run `.py`, `.js`, `.sh` files
+- Start/Stop/Restart processes
+- Real-time logs streaming
+- Install modules: `pip install` or `npm install`
+- View and delete files
 
-> ⚠️ **Important**: Change these credentials immediately after first login!
+## Environment Variables
 
-## 🚀 Deployment
+- `SECRET_KEY` - Set this for persistent sessions (optional)
 
-### Deploy on Railway (Recommended)
+## Local Development
 
-1. **Push to GitHub**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git remote add origin https://github.com/yourusername/vps-panel.git
-   git push -u origin main
+```bash
+pip install -r requirements.txt
+python app.py
+# Open http://localhost:5000
