@@ -1,0 +1,30 @@
+{
+  "currency": "\u20b9",
+  "contact": "Telegram: @agajayofficial",
+  "plans": [
+    {
+      "name": "Starter",
+      "duration": "24 Hours",
+      "price": "49",
+      "features": "1 file run, 512MB RAM, Real-time logs"
+    },
+    {
+      "name": "Basic",
+      "duration": "7 Days",
+      "price": "199",
+      "features": "Multi-file upload, pip/npm install, 24/7 uptime"
+    },
+    {
+      "name": "Pro",
+      "duration": "30 Days",
+      "price": "599",
+      "features": "Unlimited modules, Priority support, Auto-restart"
+    },
+    {
+      "name": "Premium",
+      "duration": "Lifetime",
+      "price": "1999",
+      "features": "All features, Custom domain, Dedicated help"
+    }
+  ]
+}
